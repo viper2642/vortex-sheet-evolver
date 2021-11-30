@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import numpy as np
 import matplotlib.pyplot as plt
 import time
@@ -13,9 +11,6 @@ class Simulation:
                 self.alpha=alpha
                 self.g=gravity
                 self.delta_square=delta_square
-                
-                self.uold=self.vs.u
-                self.vold=self.vs.v
                 
         def push_interface(self,dt):
                 tx,ty=self.vs.unit_tangent()
@@ -45,8 +40,7 @@ class Simulation:
         def save_velocity(self):
                 self.uold=self.vs.u
                 self.vold=self.vs.v        
-                                
-        
+                
 
 class VortexSheet:
         """ we assume periodic boundary over x\in[0,2\pi). """
