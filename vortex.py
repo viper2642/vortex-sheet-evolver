@@ -38,8 +38,8 @@ class Simulation:
                 self.vs.update_velocity(self.delta_square)  # update velocity
 
         def save_velocity(self):
-                self.uold=self.vs.u
-                self.vold=self.vs.v        
+                self.uold=self.vs.u.copy()
+                self.vold=self.vs.v.copy()        
                 
 
 class VortexSheet:
